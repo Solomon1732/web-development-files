@@ -1,0 +1,42 @@
+body {
+	margin: auto;
+	width: 100%;
+	background-color: yellow;
+}
+
+#main-headline {
+	text-align: center;
+}
+
+#first-paragraph {
+	text-align: center;
+}
+
+#second-paragraph {
+	text-align: center;
+}
+
+#lists {
+	text-align: center;
+}
+
+div {
+	display: block;
+	text-align: center;
+}
+
+ul {
+	float: right;
+	display: inline-block;
+	text-align: left;
+}
+
+.center {
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
+
+.done {
+	text-decoration: line-through;
+}

@@ -1,0 +1,10 @@
+Javasctipt events:
+- click
+- mouseenter
+- mouseleave
+- mouseup
+- mousemove
+- keydown
+- keyup
+- blur
+- focus

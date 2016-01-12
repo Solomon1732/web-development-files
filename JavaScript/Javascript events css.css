@@ -1,0 +1,23 @@
+body {
+	margin: auto;
+	width: 100%;
+}
+
+#add-numbers {
+	text-align: center;	
+}
+
+#main-headline {
+	text-align: center;
+}
+
+div {
+	display: block;
+	text-align: center;
+}
+
+.center {
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
