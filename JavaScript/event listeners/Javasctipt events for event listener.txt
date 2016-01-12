@@ -1,0 +1,13 @@
+Javasctipt Events:
+- click
+- mouseenter
+- mouseleave
+- mouseup
+- mousemove
+- keydown
+- keyup
+- blur
+- focus
+
+A more extensive list of events can be found here:
+https://developer.mozilla.org/en-US/docs/Web/Events
