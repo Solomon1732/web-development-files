@@ -1,0 +1,2 @@
+link for JavaScript key codes:
+https://css-tricks.com/snippets/javascript/javascript-keycodes/
