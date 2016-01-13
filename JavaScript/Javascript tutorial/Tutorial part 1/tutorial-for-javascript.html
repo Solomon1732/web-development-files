@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="A page for practicing JavaScript">
+		<meta name="keywords" content="HTML, CSS">
+		<meta name="author" content="Shlomi">
+		<link rel="stylesheet" type="text/css" href="css for practice page.css">
+		<!-- Link to JavaScript -->
+		<script type="text/javascript" src="addfunction2.js"></script>
+	</head>
+
+	<body>
+
+		<header>
+			<!-- header body -->
+		</header>
+
+		<main>
+			<!-- main body -->
+		</main>
+
+	</body>
+
+	<script language="javascript" type="text/javascript">
+		<!-- //Hide JavaScript
+		//string tutorial
+		document.write("String tutorial:<br><br>");
+		var samp_string = "Here are some escaped characters \" \' \\ \t";
+		document.write(samp_string + "<br>");
+
+		var first_str = "First String ";
+		var second_str = "Second String";
+
+		var combined = first_str + second_str;
+		document.write(combined + "<br>");
+		document.write("Length of string: " + combined.length + "<br>");
+		document.write("Substring" + combined.substring(6, 12) + "<br>");
+		document.write("Last character: " + combined.charAt(combined.length - 1) + "<br>");
+		document.write("Index of T is: " + combined.indexOf('t') + "<br>");
+
+		//variable tutorial
+		document.write("<br>Variable tutorial:<br><br>");
+		var str_var = "5";
+		var num_var = 10;
+
+		var total = num_var + str_var;
+		var mult_total = num_var * str_var;
+
+		document.write("5 + 10 = " + total + "<br>");
+		document.write("5 * 10 = " + mult_total + "<br>");
+
+		total = num_var + Number(str_var);
+		document.write("5 + 10 = " + total + "<br>");
+
+		var num_var2 = String(num_var);
+		document.write(num_var + num_var + "<br>");
+		document.write(num_var + num_var2 + "<br>");
+
+		//float tutorial
+		document.write("<br>Float tutorial:<br><br>");
+		var float_var = 3.141592653589793238;
+		var float_str = float_var.toFixed(5);
+		document.write("Shortened PI: " + float_str + "<br>");
+
+		document.write("Integer PI: " + parseInt(float_var) + "<br>");
+
+		document.write("Datatype of float var: " + typeof(float_str) + "<br>");
+		document.write("Datatype of float var: " + typeof(float_var) + "<br>");
+
+		//boolean tutorial
+		document.write("<br>Boolean tutorial:<br><br>");
+		var bool_var = Boolean(23);
+		document.write("Boolean of 23 is: " + bool_var + "<br>");
+
+		document.write("<br>Comparison tutorial:<br><br>");
+		var rand_num1 = 5;
+		var rand_num2 = 10;
+
+		document.write("Is 5 > 10 " + (rand_num1 > rand_num2) + "<br>");
+		document.write("Is 5 >= 10 " + (rand_num1 >= rand_num2) + "<br>");
+		document.write("Is 5 < 10 " + (rand_num1 < rand_num2) + "<br>");
+		document.write("Is 5 <= 10 " + (rand_num1 <= rand_num2) + "<br>");
+		document.write("Is 5 == 10 " + (rand_num1 == rand_num2) + "<br>");
+		document.write("Is 5 === 10 " + (rand_num1 === rand_num2) + "<br>");
+		document.write("Is 5 != 10 " + (rand_num1 != rand_num2) + "<br>");
+
+		document.write("Is 5 < 10 and 5 != 10 " +
+			((rand_num1 < rand_num2) && (rand_num1 != rand_num2)) + "<br>");
+		document.write("Is 5 > 10 or 5 != 10 " +
+			((rand_num1 > rand_num2) || (rand_num1 != rand_num2)) + "<br>");
+		document.write("Is 5 < 10 " + !(rand_num1 < rand_num2) + "<br>");
+
+		//array tutorial
+		document.write("<br>Array tutorial<br><br>")
+		var vehicles = new Array("car", "truck", "van");
+		document.write("The second item in the array is: " + vehicles[1] + "<br>");
+
+		for(i in vehicles) {
+			document.write("Value in array " + vehicles[i] + "<br>");
+		}
+
+		//conditional operator tutorial
+		document.write("<br>Conditional operators tutorial<br><br>");
+		var rand_var = (5 < 10) ? "5 is less than 10" : "5 is equal to" +
+		" or greater then 10";
+		document.write("rand_var equals " + rand_var + "<br>");
+
+		if(5 > 5) {
+			document.write("5 is greater than 10<br>");
+		} else if(5 < 5) {
+			document.write("5 is less than 10<br>");
+		} else {
+			document.write("5 is equal to 10<br>");
+		}
+
+		var state = "Pennsylvania";
+
+		switch(state) {
+			case "California":
+				document.write("Warmer than me<br>");
+				break;
+			case "Pennsylvania":
+				document.write("Same as me<br>");
+				break;
+			default:
+				document.write("I don't know<br>");
+				break;
+		}
+
+		//loop tutorial
+		document.write("<br>Loop tutorial<br><br>");
+		var count = 1;
+
+		while(count <= 10) {
+			if(6 === count) {
+				break;
+			}
+
+			if(count % 2) {
+				++count;
+				continue;
+			}
+
+			document.write(count + "<br>");
+			++count;
+		}
+
+		count = 10;
+
+		do {
+			document.write(count + "<br>");
+			--count;
+		} while (count > 10);
+
+		for(var count = 0; count <= 10; ++count) {
+			document.write(count + "<br>");
+		}
+
+		//external file tutorial
+		document.write("<br>External file tutorial<br><br>");
+		document.write("5 + 25 = " + addThese(5, 25) + "<br>");
+		-->
+	</script>
+
+	<!-- In case the browser does not support/allow JavaScript -->
+	<noscript>
+		<h3>This site requires JavaScript in order to function</h3>
+	</noscript>
+
+</html>
