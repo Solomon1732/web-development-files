@@ -2,43 +2,80 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="A page for a todo list">
-  <meta name="keywords" content="HTML, CSS">
-  <meta name="author" content="Shlomi">
-  <link rel="stylesheet" type="text/css" href="Todo-list.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="A page for a todo list">
+	<meta name="keywords" content="HTML, CSS">
+	<meta name="author" content="Shlomi">
+	<link rel="stylesheet" type="text/css" href="Todo-list.css">
 </head>
 
 <body>
-  <h2>Tasks to do</h2>
-  <nav>
-    <a href="Todo-list.html">Home Page</a>
-    <a href="All-task.html">All Tasks</a>
-    <a href="ToDo-task.html">ToDo Tasks</a>
-    <a href="Done-task.html">Done Tasks</a>
-  </nav>
-  <form>
-    <fieldset>
-      <legend>All Tasks</legend>
-      <ol>
-        <li>
-          <input type=checkbox>Bring car for checkup</li>
-        <li>
-          <input type=checkbox>Buy present for wedding</li>
-        <li>
-          <input type=checkbox>Buy wine to drink at wedding</li>
-    </fieldset>
-  </form>
-  <p>
-    <form>
-      Add task:
-      <br>
-      <input type="text" name="Addtask">
-      <br>
-      <br>
-      <input type="submit">
-    </form>
-  </p>
+	<h2>Tasks to do</h2>
+	<nav>
+		<a href="Todo-list.html">Home Page</a>
+		<a href="All-task.html">All Tasks</a>
+		<a href="ToDo-task.html">ToDo Tasks</a>
+		<a href="Done-task.html">Done Tasks</a>
+	</nav>
+	<form>
+		<fieldset>
+			<legend>To-do Tasks</legend>
+			<ul id="todo-tasks">
+			<!-- 	<li>
+					<input type=checkbox>Bring car for checkup</li>
+				<li>
+					<input type=checkbox>Buy present for wedding</li>
+				<li>
+					<input type=checkbox>Buy wine to drink at wedding</li>
+			</ul> -->
+		</fieldset>
+	</form>
+	<p>
+		<form>
+			Add task:
+			<br>
+			<input type="text" name="Addtask" id="task-to-add">
+			<br>
+			<br>
+			<button onclick="addTask()">Add</button>
+		</form>
+	</p>
+
+	<script language="javascript" type="text/javascript">
+	<!-- //Hide JavaScript
+		var taskNumber = 0;
+
+		function addTask() {
+			/* Prevents the page refreshing after the tasks executed on click.
+			 * <form> automatically refreshes the page unless specified otherwise*/
+			event.preventDefault();
+			var taskText = document.getElementById("task-to-add").value;
+			document.getElementById("task-to-add").value = "";
+			// alert(taskText);
+			//console.log(taskText);
+			if(taskText == "") {
+				alert("Warning: You left the Add Task empty");
+				window.location.reload();
+				return;
+			}
+			
+			var ul = document.getElementById("todo-tasks");
+			var li = document.createElement("li");
+			var input = document.createElement("input");
+			li.setAttribute("id", "task" + taskNumber++);
+			input.setAttribute("type", "checkbox");
+			console.log(li.id);
+			li.appendChild(input);
+			li.appendChild(document.createTextNode(taskText));
+			ul.appendChild(li);
+			// alert('adding task');
+		}
+	-->
+	</script>
+	<!-- In case the browser does not support/allow JavaScript -->
+	<noscript>
+		<h3>This site requires JavaScript in order to function</h3>
+	</noscript>
 
 </body>
 

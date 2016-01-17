@@ -2,42 +2,55 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="A page for a todo list">
-  <meta name="keywords" content="HTML, CSS">
-  <meta name="author" content="Shlomi">
-  <link rel="stylesheet" type="text/css" href="Todo-list.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="A page for a todo list">
+	<meta name="keywords" content="HTML, CSS">
+	<meta name="author" content="Shlomi">
+	<link rel="stylesheet" type="text/css" href="Todo-list.css">
 </head>
 
 <body>
-  <h2>All tasks</h2>
-  <nav>
-    <a href="Todo-list.html">Home Page</a>
-    <a href="All-task.html">All Tasks</a>
-    <a href="ToDo-task.html">ToDo Tasks</a>
-    <a href="Done-task.html">Done Tasks</a>
-  </nav>
-  <p class="request_for_marking">
-    Please check
-    <input type=checkbox checked> the tasks you've already done
-  </p>
-  <form>
-    <fieldset>
-      <legend>All Tasks</legend>
-      <ol>
-        <li class=checked>
-          <input type=checkbox checked>Pick package from mail</li>
-        <li>
-          <input type=checkbox>Bring car for checkup</li>
-        <li>
-          <input type=checkbox>Buy present for wedding</li>
-        <li>
-          <input type=checkbox>Buy wine to drink at wedding</li>
-        <li class=checked>
-          <input type=checkbox checked>Clean dishes</li>
-    </fieldset>
-  </form>
-  <button type="submit" value="Submit">Apply</button>
+	<h2>All tasks</h2>
+	<nav>
+		<a href="Todo-list.html">Home Page</a>
+		<a href="All-task.html">All Tasks</a>
+		<a href="ToDo-task.html">ToDo Tasks</a>
+		<a href="Done-task.html">Done Tasks</a>
+	</nav>
+	<p class="request_for_marking">
+		Please check
+		<input type=checkbox checked> the tasks you've already done
+	</p>
+	<form>
+		<fieldset>
+			<legend>All Tasks</legend>
+			<ul id="all-tasks-list">
+				<!-- <li class=checked>
+					<input type=checkbox checked>Pick package from mail</li>
+				<li>
+					<input type=checkbox>Bring car for checkup</li>
+				<li>
+					<input type=checkbox>Buy present for wedding</li>
+				<li>
+					<input type=checkbox>Buy wine to drink at wedding</li>
+				<li class=checked>
+					<input type=checkbox checked>Clean dishes</li> -->
+			</ul>
+		</fieldset>
+	</form>
+	<button type="submit" value="Submit">Apply</button>
+
+	<script language="javascript" type="text/javascript">
+	<!-- //Hide JavaScript
+
+		//script body
+
+	-->
+	</script>
+	<!-- In case the browser does not support/allow JavaScript -->
+	<noscript>
+		<h3>This site requires JavaScript in order to function</h3>
+	</noscript>
 
 </body>
 
