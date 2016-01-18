@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="Todo-list.css">
 </head>
 
-<body>
+<body onload="uploadFromLocalStorage()">
 	<h2>Tasks to do</h2>
 	<nav>
 		<a href="Todo-list.html">Home Page</a>
@@ -37,7 +37,7 @@
 			<input type="text" name="Addtask" id="task-to-add">
 			<br>
 			<br>
-			<button onclick="addTask()">Add</button>
+			<button onclick="addTask()" id="add-task-button">Add</button>
 		</form>
 	</p>
 
@@ -50,9 +50,8 @@
 			 * <form> automatically refreshes the page unless specified otherwise*/
 			event.preventDefault();
 			var taskText = document.getElementById("task-to-add").value;
+			//console.log(taskNumber);
 			document.getElementById("task-to-add").value = "";
-			// alert(taskText);
-			//console.log(taskText);
 			if(taskText == "") {
 				alert("Warning: You left the Add Task empty");
 				window.location.reload();
@@ -62,14 +61,86 @@
 			var ul = document.getElementById("todo-tasks");
 			var li = document.createElement("li");
 			var input = document.createElement("input");
+			//console.log(taskNumber);
+
 			li.setAttribute("id", "task" + taskNumber++);
 			input.setAttribute("type", "checkbox");
-			console.log(li.id);
+			//console.log(taskNumber);
 			li.appendChild(input);
 			li.appendChild(document.createTextNode(taskText));
+			//console.log(taskNumber);
 			ul.appendChild(li);
-			// alert('adding task');
+			localStorage[li.id] = JSON.stringify({checked: false, taskText: taskText});
+			//console.log(taskNumber);
+			localStorage.taskNumber = taskNumber;
 		}
+		function getTaskText(_element) {
+			var elementText = _element.innerHTML.split('>');
+			return elementText.splice(1, 1);
+		}
+
+		/*
+		 * function getTaskText(_element) {
+		 *		var elementText = _element.innerHTML.split('>');
+		 *		return elementText.splice(1, 1);
+		 *	}
+		 */
+		/*
+		 *	function storeList(list) {
+		 *		for(var i = 0, len = list.length; i < len; ++i) {
+		 *			console.log(list[i]);
+		 * 			localStorage[list[i].id] = getTaskText(list[i]);
+		 * 		}
+		 *	}
+		 */
+		/*
+		 *	var storedTasks = Object.keys(localStorage);
+		 *		for(var i = 0; i < storedTasks.length; ++i) {
+		 *			console.log("Name: " + storedTasks[i]);
+		 *			console.log("Value: " + localStorage[storedTasks[i]]);
+		 *	}
+		 */
+		
+		 	function uploadFromLocalStorage() {
+		 		var ul = null;
+		 		var li = null;
+		 		var input = null;	
+		 		var storedTasks = Object.keys(localStorage);
+		 		var task = null;
+
+		 		if("taskNumber" in localStorage) {
+			 		taskNumber = localStorage.taskNumber;
+		 		}/* else {
+		 			taskNumber = 0;
+		 		}*/
+
+		 		for(var i = 0; i < storedTasks.length; ++i) {
+		 			task = JSON.parse(localStorage[storedTasks[i]]);
+		 			if(storedTasks[i] != "taskNumber" && !task.checked) {
+		 				ul = document.getElementById("todo-tasks");
+		 				li = document.createElement("li");
+		 				input = document.createElement("input");
+		 
+		 				li.setAttribute("id", storedTasks[i]);
+		 				input.setAttribute("type", "checkbox");
+		 				li.appendChild(input);
+		 				li.appendChild(document.createTextNode(task.taskText));
+		 				ul.appendChild(li);
+		 			}
+		 		}
+		 	}
+		 
+		/*
+		 *	function changeColorWhenChecked(){
+		 *		for(var i = 0, len = storedTasks.length; i < len; ++i) {
+		 *			if(storedTasks[i].checked) {
+		 *				storedTasks[i].parentNode.style.color = "red";
+		 *			} else {
+		 *				storedTasks[i].parentNode.style.color = "green";
+		 *			}
+		 *		}
+		 *	}
+		 */
 	-->
 	</script>
 	<!-- In case the browser does not support/allow JavaScript -->
