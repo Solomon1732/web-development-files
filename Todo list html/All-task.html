@@ -9,10 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="Todo-list.css">
 </head>
 
-<body>
+<body onload="uploadFromLocalStorage()">
 	<h2>All tasks</h2>
 	<nav>
-		<a href="Todo-list.html">Home Page</a>
+		<a href="Home.html">Home Page</a>
 		<a href="All-task.html">All Tasks</a>
 		<a href="ToDo-task.html">ToDo Tasks</a>
 		<a href="Done-task.html">Done Tasks</a>
@@ -24,28 +24,15 @@
 	<form>
 		<fieldset>
 			<legend>All Tasks</legend>
-			<ul id="all-tasks-list">
-				<!-- <li class=checked>
-					<input type=checkbox checked>Pick package from mail</li>
-				<li>
-					<input type=checkbox>Bring car for checkup</li>
-				<li>
-					<input type=checkbox>Buy present for wedding</li>
-				<li>
-					<input type=checkbox>Buy wine to drink at wedding</li>
-				<li class=checked>
-					<input type=checkbox checked>Clean dishes</li> -->
+			<ul id="all-tasks">
 			</ul>
 		</fieldset>
 	</form>
-	<button type="submit" value="Submit">Apply</button>
+	<button type="submit" value="Submit" onclick="changeColorWhenChecked()">Apply</button>
 
-	<script language="javascript" type="text/javascript">
-	<!-- //Hide JavaScript
-
-		//script body
-
-	-->
+	<script language="javascript" type="text/javascript" src="All-task javascript.js">
+		<!-- //Hide JavaScript
+		-->
 	</script>
 	<!-- In case the browser does not support/allow JavaScript -->
 	<noscript>
