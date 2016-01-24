@@ -28,11 +28,6 @@ function addTask() {
 	return false;
 }
 
-function getTaskText(_element) {
-	var elementText = _element.innerHTML.split('>');
-	return elementText.splice(1, 1);
-}
-
 function uploadFromLocalStorage() {
 	var ul = document.getElementById("todo-tasks");
 	var li = null;

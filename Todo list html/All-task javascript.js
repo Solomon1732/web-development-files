@@ -22,7 +22,7 @@ function changeColorWhenChecked(){
 
 function getTaskText(_element) {
 	var elementText = _element.innerHTML.split('>');
-				return elementText.splice(1, 1);
+	return elementText.splice(1, 1);
 }
 
 function uploadFromLocalStorage() {
