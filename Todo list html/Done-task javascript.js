@@ -15,7 +15,6 @@ function uploadFromLocalStorage() {
 			input.setAttribute("type", "checkbox");
 
 			li.setAttribute("class", "checked");
-			input.checked = true;
 
 			li.appendChild(input);
 			li.appendChild(document.createTextNode(task.taskText));
@@ -28,7 +27,9 @@ function clearList() {
 	var doneTasks = document.getElementById("done-tasks").
 						getElementsByTagName("li");
 		for(var i = 0, length = doneTasks.length; i < length; ++i) {
-		localStorage.removeItem(doneTasks[i].id);
+			if(doneTasks[i].firstChild.checked) {
+				localStorage.removeItem(doneTasks[i].id);
+			}
 	}
 	window.location.reload();
 }

@@ -14,9 +14,9 @@ function addTask() {
 
 	li.setAttribute("id", "task" + taskNumber++);
 
-	input.setAttribute("type", "checkbox");
+	//input.setAttribute("type", "checkbox");
 
-	li.appendChild(input);
+	//li.appendChild(input);
 	li.appendChild(document.createTextNode(taskText));
 
 	ul.appendChild(li);
@@ -42,8 +42,8 @@ function uploadFromLocalStorage() {
 			input = document.createElement("input");
 
 			li.setAttribute("id", storedTasks[i]);
-			input.setAttribute("type", "checkbox");
-			li.appendChild(input);
+			//input.setAttribute("type", "checkbox");
+			//li.appendChild(input);
 			li.appendChild(document.createTextNode(task.taskText));
 			ul.appendChild(li);
 		}
