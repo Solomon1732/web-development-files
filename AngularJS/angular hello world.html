@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="A page for practicing JavaScript">
+		<meta name="keywords" content="HTML, CSS">
+		<meta name="author" content="Shlomi">
+		<title>AngularJS First Application</title>
+	</head>
+
+	<body>
+		<h1>Sample Application</h1>
+
+		<div ng-app="" ng-init="countries = [{locale:'en-US',name:'United States'}, {locale:'en-GB',name:'United Kingdom'}, {locale:'en-FR',name:'France'}]">
+			<p>Enter your name: <input type="text" ng-model="name"
+				placeholder="Enter your name"></p>
+			<p>Hello {{name}}!</p>
+<!-- 			Can also write
+			<p>Hello <span ng-bind="name"></span>!</p>
+			instead in order to bind the name model to be displayed
+			in the html span tag -->
+			<p>List of contries with locale:</p>
+
+			<ol>
+				<li ng-repeat="country in countries">
+					{{"Country: " + country.name + ", Locale: "
+					+ country.locale}}
+				</li>
+			</ol>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+		<!-- In case the browser does not support/allow JavaScript -->
+		<noscript>
+			<h3>This site requires JavaScript in order to function</h3>
+		</noscript>
+
+	</body>
+
+</html>

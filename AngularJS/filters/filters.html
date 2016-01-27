@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="A page for practicing JavaScript">
+		<meta name="keywords" content="HTML, CSS">
+		<meta name="author" content="Shlomi">
+		<title>Angular JS Filters</title>
+	</head>
+
+	<body>
+		<h2>AngularJS Sample Application</h2>
+	      <div ng-app = "mainApp" ng-controller = "studentController">
+	         <table border = "0">
+	            <tr>
+	               <td>Enter first name:</td>
+	               <td><input type = "text" ng-model = "student.firstName"></td>
+	            </tr>
+            
+	            <tr>
+	               <td>Enter last name: </td>
+	               <td><input type = "text" ng-model = "student.lastName"></td>
+	            </tr>
+            
+	            <tr>
+	               <td>Enter fees: </td>
+	               <td><input type = "text" ng-model = "student.fees"></td>
+	            </tr>
+            
+	            <tr>
+	               <td>Enter subject: </td>
+	               <td><input type = "text" ng-model = "subjectName"></td>
+	            </tr>
+	         </table>
+	         <br/>
+         
+	         <table border = "0">
+	            <tr>
+	               <td>Name in Upper Case: </td><td>{{student.fullName() | uppercase}}</td>
+	            </tr>
+
+	            <tr>
+	               <td>Name in Lower Case: </td><td>{{student.fullName() | lowercase}}</td>
+	            </tr>
+         
+	            <tr>
+	               <td>fees: </td><td>{{student.fees | currency}}
+	               </td>
+	            </tr>
+				
+	            <tr>
+	               <td>Subject:</td>
+
+	               <td>
+	                  <ul>
+	                     <li ng-repeat = "subject in student.subjects | filter: subjectName |orderBy:'marks'">
+                        {{ subject.name + ', marks:' + subject.marks }}
+	                     </li>
+	                  </ul>
+	               </td>
+	            </tr>
+	         </table>
+
+	      </div>
+
+	      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		  <script type="text/javascript" src="student controller.js"></script>
+
+		<!-- In case the browser does not support/allow JavaScript -->
+		<noscript>
+			<h3>This site requires JavaScript in order to function</h3>
+		</noscript>
+	</body>
+
+</html>
