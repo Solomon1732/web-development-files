@@ -3,19 +3,31 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="A page for practicing JavaScript">
+		<meta name="description" content="A page for practicing AngularJs">
 		<meta name="keywords" content="HTML, CSS">
 		<meta name="author" content="Shlomi">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="angular hello world style.css ">
 		<title>AngularJS First Application</title>
 	</head>
 
 	<body>
+		<!-- In case the browser does not support/allow JavaScript -->
+		<noscript>
+			<h1>This site requires JavaScript in order to function</h1>
+		</noscript>
+
 		<h1>Sample Application</h1>
 
 		<div ng-app="" ng-init="countries = [{locale:'en-US',name:'United States'}, {locale:'en-GB',name:'United Kingdom'}, {locale:'en-FR',name:'France'}]">
 			<p>Enter your name: <input type="text" ng-model="name"
 				placeholder="Enter your name"></p>
-			<p>Hello {{name}}!</p>
+			<!-- The ngCloak directive is used to prevent the Angular html
+				template from being briefly displayed by the browser in its raw
+				(uncompiled) form while the application is loading.
+				See https://docs.angularjs.org/api/ng/directive/ngCloak for full
+				description. -->
+			<p ng-cloak>Hello {{name}}!</p>
 <!-- 			Can also write
 			<p>Hello <span ng-bind="name"></span>!</p>
 			instead in order to bind the name model to be displayed
@@ -23,20 +35,12 @@
 			<p>List of contries with locale:</p>
 
 			<ol>
-				<li ng-repeat="country in countries">
+				<li ng-repeat="country in countries" ng-cloak>
 					{{"Country: " + country.name + ", Locale: "
 					+ country.locale}}
 				</li>
 			</ol>
 		</div>
-
-
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-
-		<!-- In case the browser does not support/allow JavaScript -->
-		<noscript>
-			<h3>This site requires JavaScript in order to function</h3>
-		</noscript>
 
 	</body>
 
