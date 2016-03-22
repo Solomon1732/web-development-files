@@ -16,17 +16,19 @@
 var app = angular.module("myApp", []);
 
 app.controller("Hello", ["$scope", "$http", function($scope, $http) {
+
 	$scope.helloWithName = function() {
-		var url = "";
+		var url = "http://rest-service.guides.spring.io/greeting";
+
 		if($scope.name) {
 			url = "http://rest-service.guides.spring.io/greeting?name=" + $scope.name;
-		} else {
-			url = "http://rest-service.guides.spring.io/greeting";
 		}
+
 		console.log("The name is: " + $scope.name + " and the url is: " + url);
 		$http.get(url)
 			.then(function(response) {
 				$scope.greeting = response.data;
 		});
 	};
+
 }]);
