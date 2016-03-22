@@ -25,17 +25,17 @@ limitations under the License.
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
 	</head>
 
-	<body ng-app="myApp">
+	<body>
 		<!-- In case the browser does not support/allow JavaScript -->
 		<noscript>
 			<h1>This site requires JavaScript in order to function</h1>
 		</noscript>
 
-		<div  ng-controller="Hello">
+		<div ng-app="myApp" ng-controller="Hello">
 			<div id="name-form">
 				<form>
-					Enter your name: <input type="text" ng-model="name"></input>
-					<br><button type="button" ng-click="helloWithName">submit</button>
+					Enter your name: <input type="text" ng-model="name">
+					<br><button type="button" ng-click="helloWithName()">submit</button>
 				</form>
 			</div>
 			<div id="contents">
