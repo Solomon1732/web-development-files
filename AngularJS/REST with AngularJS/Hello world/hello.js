@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var url = "";
 var app = angular.module("myApp", []);
 
 app.controller("Hello", ["$scope", "$http", function($scope, $http) {
 	$scope.helloWithName = function() {
+		var url = "";
 		if($scope.name) {
 			url = "http://rest-service.guides.spring.io/greeting?name=" + $scope.name;
 		} else {
